@@ -14,7 +14,8 @@ const Home: NextPage = () => {
     setMounted(true);
   }, []);
 
-  const chainId = 31337;
+  // CORRECCIÓN: ID de Sepolia (11155111) para conectar con el contrato real
+  const chainId = 11155111;
   const allContractsData = deployedContracts as any;
   const marketConfig = allContractsData[chainId]?.CampusMarket;
 
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
   if (!mounted || !marketConfig) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-white">
-        <p className="font-bold text-gray-500 animate-pulse">Cargando Campus Market...</p>
+        <p className="font-bold text-gray-500 animate-pulse">Cargando Campus Market en Sepolia...</p>
       </div>
     );
   }
@@ -57,11 +58,11 @@ const Home: NextPage = () => {
         <header className="bg-white rounded-2xl p-6 shadow-sm border mb-8 flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-black text-blue-600 tracking-tight">CAMPUS MARKET</h1>
-            <p className="text-gray-400 text-xs uppercase font-bold tracking-widest">Portal de Ventas</p>
+            <p className="text-gray-400 text-xs uppercase font-bold tracking-widest">Portal de Ventas - UPTA</p>
           </div>
           <div className="text-right">
             <span className="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-bold">
-              BLOCKCHAIN ACTIVA
+              SEPOLIA ACTIVA
             </span>
           </div>
         </header>
@@ -100,8 +101,8 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        {/* Galería de Productos con la lógica de "Vendido" */}
-        <h2 className="text-xl font-bold mb-6 px-2">Marketplace en Vivo</h2>
+        {/* Galería de Productos */}
+        <h2 className="text-xl font-bold mb-6 px-2">Marketplace en Vivo (Sepolia)</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {Array.from({ length: Number(itemCount || 0) }).map((_, i) => (
             <ProductCard key={i} id={BigInt(i + 1)} config={marketConfig} />
@@ -112,7 +113,7 @@ const Home: NextPage = () => {
   );
 };
 
-// Componente Tarjeta con la Condición de Botón/Vendido
+// Componente Tarjeta de Producto
 const ProductCard = ({ id, config }: any) => {
   const { data: item, refetch }: any = useReadContract({
     address: config.address,
@@ -123,15 +124,13 @@ const ProductCard = ({ id, config }: any) => {
 
   const { writeContractAsync } = useWriteContract();
 
-  // Evitar renderizar si el item está vacío
   if (!item || item[1] === "0x0000000000000000000000000000000000000000") return null;
 
-  // Variables para facilitar la lectura
   const price = item[2];
   const title = item[3];
   const desc = item[4];
   const cat = item[5];
-  const isSold = item[6]; // Este es el booleano que define el estado
+  const isSold = item[6];
 
   return (
     <div
@@ -155,9 +154,8 @@ const ProductCard = ({ id, config }: any) => {
           <span className="text-2xl font-black text-gray-900">{formatEther(price)} ETH</span>
         </div>
 
-        {/* Lógica de Condición: Si está vendido, no hay botón */}
         {isSold ? (
-          <div className="flex items-center gap-1 text-red-500 font-bold text-sm italic">Vendido correctamente</div>
+          <div className="flex items-center gap-1 text-red-500 font-bold text-sm italic">Vendido</div>
         ) : (
           <button
             className="btn btn-success btn-sm text-white px-6 rounded-lg"
@@ -170,7 +168,7 @@ const ProductCard = ({ id, config }: any) => {
                   args: [id],
                   value: price,
                 });
-                refetch(); // Actualizar la tarjeta tras la compra
+                setTimeout(() => refetch(), 1500);
               } catch (e) {
                 console.error(e);
               }
