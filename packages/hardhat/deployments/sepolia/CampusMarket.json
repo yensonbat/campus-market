@@ -1,0 +1,296 @@
+{
+  "address": "0x9dFcd983ff85e25a5f069fdE75724aFA47E32076",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        }
+      ],
+      "name": "ItemSold",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "buyItem",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "itemCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "items",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "isSold",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_title",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
+        }
+      ],
+      "name": "listItem",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x006eb5a0cf2320f4bf5e1a952b5113d74548aabb66f391f298485d649f8b0c44",
+  "receipt": {
+    "to": null,
+    "from": "0x40b8D990dE59c0d6487898586d98632fE0322e23",
+    "contractAddress": "0x9dFcd983ff85e25a5f069fdE75724aFA47E32076",
+    "transactionIndex": 58,
+    "gasUsed": "564559",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x292bb8d1dd641f1666f2a86ed28f62799fd22697d7f524696b9d09a76773e673",
+    "transactionHash": "0x006eb5a0cf2320f4bf5e1a952b5113d74548aabb66f391f298485d649f8b0c44",
+    "logs": [],
+    "blockNumber": 10159285,
+    "cumulativeGasUsed": "9995271",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "9155ed7b8e30e2bc923d464dea242e74",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"seller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"ItemCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"buyer\",\"type\":\"address\"}],\"name\":\"ItemSold\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"buyItem\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"itemCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"items\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"seller\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"category\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"isSold\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_category\",\"type\":\"string\"}],\"name\":\"listItem\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/CampusMarket.sol\":\"CampusMarket\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/CampusMarket.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity >=0.8.0 <0.9.0;\\r\\n\\r\\ncontract CampusMarket {\\r\\n    struct Item {\\r\\n        uint256 id;\\r\\n        address payable seller;\\r\\n        uint256 price;\\r\\n        string title;\\r\\n        string description;\\r\\n        string category;\\r\\n        bool isSold;\\r\\n    }\\r\\n\\r\\n    uint256 public itemCount;\\r\\n    mapping(uint256 => Item) public items;\\r\\n\\r\\n    // Eventos para actualizar la UI en tiempo real\\r\\n    event ItemCreated(uint256 id, address seller, uint256 price);\\r\\n    event ItemSold(uint256 id, address buyer);\\r\\n\\r\\n    function listItem(\\r\\n        uint256 _price, \\r\\n        string memory _title, \\r\\n        string memory _description, \\r\\n        string memory _category\\r\\n    ) public {\\r\\n        itemCount++;\\r\\n        items[itemCount] = Item(\\r\\n            itemCount, \\r\\n            payable(msg.sender), \\r\\n            _price, \\r\\n            _title, \\r\\n            _description, \\r\\n            _category, \\r\\n            false\\r\\n        );\\r\\n        emit ItemCreated(itemCount, msg.sender, _price);\\r\\n    }\\r\\n\\r\\n    function buyItem(uint256 _id) public payable {\\r\\n        Item storage item = items[_id];\\r\\n        require(msg.value >= item.price, \\\"Saldo enviado insuficiente\\\");\\r\\n        require(!item.isSold, \\\"El producto ya fue vendido\\\");\\r\\n        require(msg.sender != item.seller, \\\"No puedes comprar tu propio producto\\\");\\r\\n\\r\\n        item.isSold = true;\\r\\n        item.seller.transfer(msg.value); // El pago se transfiere al instante al vendedor\\r\\n        emit ItemSold(_id, msg.sender);\\r\\n    }\\r\\n}\",\"keccak256\":\"0x895ad2ae2625f83faadd58588f61c6c90d053ea40fe6971cfd91526f92134b47\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506109408061001f6000396000f3fe60806040526004361061003f5760003560e01c80636bfb0d0114610044578063a9652fa21461006d578063bfb231d21461008f578063e7fb74c7146100c2575b600080fd5b34801561005057600080fd5b5061005a60005481565b6040519081526020015b60405180910390f35b34801561007957600080fd5b5061008d610088366004610634565b6100d5565b005b34801561009b57600080fd5b506100af6100aa3660046106d2565b610202565b6040516100649796959493929190610731565b61008d6100d03660046106d2565b6103e3565b6000805490806100e48361079b565b90915550506040805160e081018252600080548083523360208085019182528486018a8152606086018a8152608087018a905260a0870189905260c087018690529385526001918290529590932084518155905192810180546001600160a01b0319166001600160a01b03909416939093179092559251600282015591519091906003820190610174908261084b565b5060808201516004820190610189908261084b565b5060a0820151600582019061019e908261084b565b5060c091909101516006909101805460ff19169115159190911790556000546040805191825233602083015281018590527f9b8c4b5bf2f39369bee0a581bf2e28b1c1df1982925a012ff839ee598d142cdd9060600160405180910390a150505050565b600160208190526000918252604090912080549181015460028201546003830180546001600160a01b0390931693919261023b906107c2565b80601f0160208091040260200160405190810160405280929190818152602001828054610267906107c2565b80156102b45780601f10610289576101008083540402835291602001916102b4565b820191906000526020600020905b81548152906001019060200180831161029757829003601f168201915b5050505050908060040180546102c9906107c2565b80601f01602080910402602001604051908101604052809291908181526020018280546102f5906107c2565b80156103425780601f1061031757610100808354040283529160200191610342565b820191906000526020600020905b81548152906001019060200180831161032557829003601f168201915b505050505090806005018054610357906107c2565b80601f0160208091040260200160405190810160405280929190818152602001828054610383906107c2565b80156103d05780601f106103a5576101008083540402835291602001916103d0565b820191906000526020600020905b8154815290600101906020018083116103b357829003601f168201915b5050506006909301549192505060ff1687565b6000818152600160205260409020600281015434101561044a5760405162461bcd60e51b815260206004820152601a60248201527f53616c646f20656e766961646f20696e737566696369656e746500000000000060448201526064015b60405180910390fd5b600681015460ff161561049f5760405162461bcd60e51b815260206004820152601a60248201527f456c2070726f647563746f207961206675652076656e6469646f0000000000006044820152606401610441565b60018101546001600160a01b031633036105075760405162461bcd60e51b8152602060048201526024808201527f4e6f2070756564657320636f6d707261722074752070726f70696f2070726f646044820152637563746f60e01b6064820152608401610441565b60068101805460ff191660019081179091558101546040516001600160a01b03909116903480156108fc02916000818181858888f19350505050158015610552573d6000803e3d6000fd5b50604080518381523360208201527f7de4035ced290be6d7724645d43bad448b5d8cc76743ff4da172c2d8e1caa0f5910160405180910390a15050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126105b657600080fd5b813567ffffffffffffffff8111156105d0576105d061058f565b604051601f8201601f19908116603f0116810167ffffffffffffffff811182821017156105ff576105ff61058f565b60405281815283820160200185101561061757600080fd5b816020850160208301376000918101602001919091529392505050565b6000806000806080858703121561064a57600080fd5b84359350602085013567ffffffffffffffff81111561066857600080fd5b610674878288016105a5565b935050604085013567ffffffffffffffff81111561069157600080fd5b61069d878288016105a5565b925050606085013567ffffffffffffffff8111156106ba57600080fd5b6106c6878288016105a5565b91505092959194509250565b6000602082840312156106e457600080fd5b5035919050565b6000815180845260005b81811015610711576020818501810151868301820152016106f5565b506000602082860101526020601f19601f83011685010191505092915050565b87815260018060a01b038716602082015285604082015260e06060820152600061075e60e08301876106eb565b828103608084015261077081876106eb565b905082810360a084015261078481866106eb565b91505082151560c083015298975050505050505050565b6000600182016107bb57634e487b7160e01b600052601160045260246000fd5b5060010190565b600181811c908216806107d657607f821691505b6020821081036107f657634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561084657806000526020600020601f840160051c810160208510156108235750805b601f840160051c820191505b81811015610843576000815560010161082f565b50505b505050565b815167ffffffffffffffff8111156108655761086561058f565b6108798161087384546107c2565b846107fc565b6020601f8211600181146108ad57600083156108955750848201515b600019600385901b1c1916600184901b178455610843565b600084815260208120601f198516915b828110156108dd57878501518255602094850194600190920191016108bd565b50848210156108fb5786840151600019600387901b60f8161c191681555b50505050600190811b0190555056fea2646970667358221220f14354a41be2f5043a6f2d97d478e6089b54616bb8279a1238622b0b75fa271264736f6c634300081e0033",
+  "deployedBytecode": "0x60806040526004361061003f5760003560e01c80636bfb0d0114610044578063a9652fa21461006d578063bfb231d21461008f578063e7fb74c7146100c2575b600080fd5b34801561005057600080fd5b5061005a60005481565b6040519081526020015b60405180910390f35b34801561007957600080fd5b5061008d610088366004610634565b6100d5565b005b34801561009b57600080fd5b506100af6100aa3660046106d2565b610202565b6040516100649796959493929190610731565b61008d6100d03660046106d2565b6103e3565b6000805490806100e48361079b565b90915550506040805160e081018252600080548083523360208085019182528486018a8152606086018a8152608087018a905260a0870189905260c087018690529385526001918290529590932084518155905192810180546001600160a01b0319166001600160a01b03909416939093179092559251600282015591519091906003820190610174908261084b565b5060808201516004820190610189908261084b565b5060a0820151600582019061019e908261084b565b5060c091909101516006909101805460ff19169115159190911790556000546040805191825233602083015281018590527f9b8c4b5bf2f39369bee0a581bf2e28b1c1df1982925a012ff839ee598d142cdd9060600160405180910390a150505050565b600160208190526000918252604090912080549181015460028201546003830180546001600160a01b0390931693919261023b906107c2565b80601f0160208091040260200160405190810160405280929190818152602001828054610267906107c2565b80156102b45780601f10610289576101008083540402835291602001916102b4565b820191906000526020600020905b81548152906001019060200180831161029757829003601f168201915b5050505050908060040180546102c9906107c2565b80601f01602080910402602001604051908101604052809291908181526020018280546102f5906107c2565b80156103425780601f1061031757610100808354040283529160200191610342565b820191906000526020600020905b81548152906001019060200180831161032557829003601f168201915b505050505090806005018054610357906107c2565b80601f0160208091040260200160405190810160405280929190818152602001828054610383906107c2565b80156103d05780601f106103a5576101008083540402835291602001916103d0565b820191906000526020600020905b8154815290600101906020018083116103b357829003601f168201915b5050506006909301549192505060ff1687565b6000818152600160205260409020600281015434101561044a5760405162461bcd60e51b815260206004820152601a60248201527f53616c646f20656e766961646f20696e737566696369656e746500000000000060448201526064015b60405180910390fd5b600681015460ff161561049f5760405162461bcd60e51b815260206004820152601a60248201527f456c2070726f647563746f207961206675652076656e6469646f0000000000006044820152606401610441565b60018101546001600160a01b031633036105075760405162461bcd60e51b8152602060048201526024808201527f4e6f2070756564657320636f6d707261722074752070726f70696f2070726f646044820152637563746f60e01b6064820152608401610441565b60068101805460ff191660019081179091558101546040516001600160a01b03909116903480156108fc02916000818181858888f19350505050158015610552573d6000803e3d6000fd5b50604080518381523360208201527f7de4035ced290be6d7724645d43bad448b5d8cc76743ff4da172c2d8e1caa0f5910160405180910390a15050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126105b657600080fd5b813567ffffffffffffffff8111156105d0576105d061058f565b604051601f8201601f19908116603f0116810167ffffffffffffffff811182821017156105ff576105ff61058f565b60405281815283820160200185101561061757600080fd5b816020850160208301376000918101602001919091529392505050565b6000806000806080858703121561064a57600080fd5b84359350602085013567ffffffffffffffff81111561066857600080fd5b610674878288016105a5565b935050604085013567ffffffffffffffff81111561069157600080fd5b61069d878288016105a5565b925050606085013567ffffffffffffffff8111156106ba57600080fd5b6106c6878288016105a5565b91505092959194509250565b6000602082840312156106e457600080fd5b5035919050565b6000815180845260005b81811015610711576020818501810151868301820152016106f5565b506000602082860101526020601f19601f83011685010191505092915050565b87815260018060a01b038716602082015285604082015260e06060820152600061075e60e08301876106eb565b828103608084015261077081876106eb565b905082810360a084015261078481866106eb565b91505082151560c083015298975050505050505050565b6000600182016107bb57634e487b7160e01b600052601160045260246000fd5b5060010190565b600181811c908216806107d657607f821691505b6020821081036107f657634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561084657806000526020600020601f840160051c810160208510156108235750805b601f840160051c820191505b81811015610843576000815560010161082f565b50505b505050565b815167ffffffffffffffff8111156108655761086561058f565b6108798161087384546107c2565b846107fc565b6020601f8211600181146108ad57600083156108955750848201515b600019600385901b1c1916600184901b178455610843565b600084815260208120601f198516915b828110156108dd57878501518255602094850194600190920191016108bd565b50848210156108fb5786840151600019600387901b60f8161c191681555b50505050600190811b0190555056fea2646970667358221220f14354a41be2f5043a6f2d97d478e6089b54616bb8279a1238622b0b75fa271264736f6c634300081e0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 18,
+        "contract": "contracts/CampusMarket.sol:CampusMarket",
+        "label": "itemCount",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 23,
+        "contract": "contracts/CampusMarket.sol:CampusMarket",
+        "label": "items",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_uint256,t_struct(Item)16_storage)"
+      }
+    ],
+    "types": {
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_uint256,t_struct(Item)16_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct CampusMarket.Item)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Item)16_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Item)16_storage": {
+        "encoding": "inplace",
+        "label": "struct CampusMarket.Item",
+        "members": [
+          {
+            "astId": 3,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "seller",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address_payable"
+          },
+          {
+            "astId": 7,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "price",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 9,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "title",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 11,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "description",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 13,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "category",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 15,
+            "contract": "contracts/CampusMarket.sol:CampusMarket",
+            "label": "isSold",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "224"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

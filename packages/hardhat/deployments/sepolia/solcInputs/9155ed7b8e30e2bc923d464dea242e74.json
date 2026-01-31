@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/CampusMarket.sol": {
+      "content": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.8.0 <0.9.0;\r\n\r\ncontract CampusMarket {\r\n    struct Item {\r\n        uint256 id;\r\n        address payable seller;\r\n        uint256 price;\r\n        string title;\r\n        string description;\r\n        string category;\r\n        bool isSold;\r\n    }\r\n\r\n    uint256 public itemCount;\r\n    mapping(uint256 => Item) public items;\r\n\r\n    // Eventos para actualizar la UI en tiempo real\r\n    event ItemCreated(uint256 id, address seller, uint256 price);\r\n    event ItemSold(uint256 id, address buyer);\r\n\r\n    function listItem(\r\n        uint256 _price, \r\n        string memory _title, \r\n        string memory _description, \r\n        string memory _category\r\n    ) public {\r\n        itemCount++;\r\n        items[itemCount] = Item(\r\n            itemCount, \r\n            payable(msg.sender), \r\n            _price, \r\n            _title, \r\n            _description, \r\n            _category, \r\n            false\r\n        );\r\n        emit ItemCreated(itemCount, msg.sender, _price);\r\n    }\r\n\r\n    function buyItem(uint256 _id) public payable {\r\n        Item storage item = items[_id];\r\n        require(msg.value >= item.price, \"Saldo enviado insuficiente\");\r\n        require(!item.isSold, \"El producto ya fue vendido\");\r\n        require(msg.sender != item.seller, \"No puedes comprar tu propio producto\");\r\n\r\n        item.isSold = true;\r\n        item.seller.transfer(msg.value); // El pago se transfiere al instante al vendedor\r\n        emit ItemSold(_id, msg.sender);\r\n    }\r\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
